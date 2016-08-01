@@ -1,0 +1,155 @@
+*{
+	margin:0;
+	padding:0;
+}
+*,:after,*:before{
+	-webkit-box-sizing:border-box;
+}
+li{
+	list-style:none;
+}
+@mixin pos($p:relative){
+	position:$p;
+}
+body,html,.box{
+	width:100%;
+	height:100%;
+	overflow: hidden;
+	background:url(../pic/bg.png);
+}
+
+.box{
+
+//...........header..................
+	header{
+		height:45px;
+		background:#fff;
+		h1{
+			@include pos();
+		    font-size:20px;
+		    text-align:center;
+		    line-height:45px;
+		    a{
+		    	@include pos(absolute);
+		    	left:10px;
+		    	top:12px;
+		    	img{
+		    		width:10px;
+		    		height:20px;
+		    	}
+		    }
+		}
+		
+	}
+//...........section.................
+	section{
+	    background:url(../pic/bg-2.png) no-repeat;
+	    background-size:100% 100%;
+	    margin:10% auto;
+	    width:80%;
+	    height:80%;
+		font-size:16px;
+		padding-top:12%;
+		@include pos();
+		h3{
+			color:#b00600;
+			text-align:center;
+			font-size:20px;
+		}
+		
+		p{
+		    @include pos();
+		    height:42px;
+			a{
+					@include pos(absolute);
+					z-index:55;
+					&:nth-of-type(1){
+						left:24%;
+						top:10px;
+					}
+				
+					&:nth-of-type(2){
+						right:25%;
+						top:10px;
+					} 
+			 input{
+					opacity: 0;
+				}  
+			}	
+
+			label{	
+				width:50px;
+				height:30px;
+				@include pos(absolute);	
+
+				&:before{
+					content:"";
+					width:15px;
+					height:15px;
+					border:1px solid #222;
+					border-radius:10px;
+					@include pos(absolute);	
+					z-index:9;
+				}
+				
+	            &:nth-of-type(1){		
+					left:23%;
+					top:13px;
+				}
+
+				&:nth-of-type(2){
+					
+					right:20%;
+					top:13px;
+				}
+			}
+		}
+		ul{
+			margin:0 auto;
+			width:80%;
+			height:43%;				
+			background:url(../pic/bing.png) no-repeat;
+			background-size:100% 100%;
+			padding-top:10%;
+			li{
+				float:left;
+				margin-left:6%;
+				height:25px;
+				width:65px;
+				margin-top: 20px;
+				text-align:center;		
+				border:1px solid #333;
+				border-radius: 5px;
+				&:hover{
+					background:red;
+					color:#fff;
+				}
+			}
+		}
+
+		.btn{
+			@include pos(absolute);
+			left:35%;
+			bottom:26%;
+			background:url(../pic/btn_bg.png);
+			background-size:100% 100%;
+			width:110px;
+			height:40px;
+			color:#b00600;
+			font-weight:900;
+			font-size:20px;
+			text-align:center;
+			line-height:40px;
+		
+		}
+		.greens{
+			width:90px;
+			height:75px;
+			background:url(../pic/ii.png);
+			background-size:100% 100%;
+		    @include pos(absolute);
+		    left:-20px;
+		    bottom:4px; 
+		}
+	}
+}

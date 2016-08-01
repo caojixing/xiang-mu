@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	.weapper{
+		position: relative;
+		width: 100%;
+		height:300px;
+	}
+	.pane{
+		width:200px;
+		height:200px;
+		border:2px solid #333;
+		float:left;
+		margin-left:6px;
+		position: relative;
+		
+	}
+
+	.pane p{
+		position: absolute;
+			left:0;
+		bottom:0;
+	}
+	.pane span{
+		display: inline-block;
+		width:40px;
+		
+	
+
+	}
+</style>
+<body>
+	<div class="wrapper">
+
+			<div class="pane">
+				<p>
+				    第一页
+					<span direct="left">&lt;</span>
+					<span direct="right">&gt;</span>
+					<span>X</span>
+				</p>
+			</div>
+
+			<div class="pane">
+				<p>
+				    第二页
+					<span direct="left">&lt;</span>
+					<span direct="right">&gt;</span>
+					<span>X</span>
+				</p>
+			</div>
+
+			<div class="pane">
+				<p>
+				    第三页
+					<span direct="left">&lt;</span>
+					<span direct="right">&gt;</span>
+					<span>X</span>
+				</p>
+			</div>
+
+			<div class="pane">
+				<p>
+				    第四页
+					<span direct="left">&lt;</span>
+					<span direct="right">&gt;</span>
+					<span>X</span>
+				</p>
+			</div>
+	</div>
+	<script>
+		//获取元素
+		var items=docuent.querySelectorAll('.wrapper .pane'),
+		len=items.length,
+		itemWidth=parseInt(getStyle(items[0],"width")),
+		flag='abc';
+
+		function getStyle(ele,attr){
+			if(ele.currentStyle){
+				return ele.currentStyle[attr]
+			}ele{
+				return getComputedStyle(ele,null)[]
+			}
+		}
+		var arr=[];
+		for(var i=0;i<len;i++){
+			items[i].style.webkitTransform='translate3d('+itemWidth*i+'px,0,0)';
+			items[i].setAttrbute('data-id',flag+i);
+			arr.push(flag+i);
+       }
+
+       function movPanels(arr){
+       	 arr.forEach(function(val,idx){
+       	 	Array.apply(null,items).forEach(function(v,i){
+       	 		if(v.grtAttribute('data-id')==val){
+       	 			v.style.webkitTransform='translate3d('+itemWidth*idx+'px,0,0)'
+       	 		}
+       	 	})
+       	 })
+       }
+
+       var spans=documrnt.querySelectorAll('.wrapper span');
+       var str=arr.join('-');
+       for(var j=0;j<spans.length;j++){
+       		spans[j],addEventListener('click',function(){
+       			var dir=this.getAttribute('direct'),
+       			_id=this.parentNode.parentNode.getAttribute('data-id');
+       			var reg=new RegExp('('\\w+')-('+_id')');
+       			    if(dir=='left'){
+       			    	if(reg.test(str)){
+       			    		str=str.replace(reg,function(a,b,c){
+       			    			return c+'-'+b;
+       			    		});
+
+       			    	}else{
+       			    		reg=new RegExp('('+_id+')(-[\\W-]+-)(\\W+)$');
+       			    		str=str.replace(red,function(a,b,c){
+       			    			return d+cb+b;
+       			    		});
+       			    	}
+       			    }else{
+       			    	reg=new RegExp('('+_id')-(\\W+)');
+       			    	if(reg.test(str)){
+       			    		str=str.replace(reg.function(a,b,c,d){
+       			    			return c+'-'+b;
+       			    		})
+       			    	}else{
+       			    		reg=new RegExp('('\\W+')(-[\\W-]+-)('+_id')'$);
+       			    		str=str.replace(reg,function(a,b,c,d){
+       			    			return d+cc+b;
+       			    		});
+       			    	}
+       			    }
+       			    arr=str.split('-');
+       			    movPanels(arr);
+       		},false);
+
+       }
+	</script>
+		
+</body>
+</html>

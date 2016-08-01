@@ -1,0 +1,102 @@
+@charset "utf-8";
+@import url("reset.css");
+
+@mixin full{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+@mixin pos($val:relative){
+	position:$val;
+}
+
+html,body,.container{
+	@include full;
+}
+
+body{
+	background:#EEEEEE;
+}
+
+.login_view{
+	@include pos;
+	width:100%;
+	height:100%;
+	margin-top:16px;
+	background:white;
+}
+
+.text{
+	width:72%;
+	height:44px;
+	margin-left:14%;
+	font-size:13px;
+	color:#515151;
+	border:none;
+	border-bottom:1px solid #EEEEEE;
+}
+
+.net_number{
+	margin-top:25px;
+}
+
+.get_code{
+	@include pos(absolute);
+	right:45px;
+	top:78px;
+	height:27px;
+	padding:0 5px 0 5px;
+	font-size:13px;
+	color:#5E83E1;
+	line-height:27px;
+	border:none;
+	background:white;
+}
+
+.btns{
+	width:72%;
+	height:40px;
+	border-radius:24px;
+	border:none;
+	font-size:14px;
+	color:white;
+	margin-left:14%;
+}
+
+.login_btn{
+	background:#ccc;
+	margin-top:38px;
+}
+
+.opencard_btn{
+	background:#5E83E1;
+	margin-top:18px;
+}
+
+.asked_questions{
+	@include pos(absolute);
+	left:50%;
+	top:270px;
+	margin-left:-46px;
+	width:92px;
+	height:14px;
+	padding-left:22px;
+	font-size:13px;
+	color:#5E83E1;
+	background:url(../images/questions_icon.png) no-repeat 0 0;
+	background-size:14px 14px;
+}
+
+.open_way{
+	@include pos(absolute);
+	left:50%;
+	bottom:55px;
+	margin-left:-50px;
+	width:100px;
+	height:15px;
+	font-size:14px;
+	color:#9C9C9C;
+	background:url(../images/arrow_right.png) no-repeat right center;
+	background-size:8px 13px;
+}

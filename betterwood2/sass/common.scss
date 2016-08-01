@@ -1,0 +1,278 @@
+@charset "utf-8";
+@import "reset";
+
+.container{
+  width: 100%;
+  height: 100%;
+  background: #f5f6f5;
+  overflow: hidden;
+  position: relative;
+  -webkit-font-smoothing: none; //无抗锯齿
+  //-webkit-font-smoothing: antialiased | subpixel-antialiased | default; //灰度平滑
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.clearfix{
+  &:before,
+  &:after {
+    display: block; //zy
+    content: " "; // 1
+    height: 0; //zy
+  }
+  &:after {
+    clear: both;
+  }
+}
+.hide{
+  display: none !important;
+}
+.loading{
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -40px 0 0 -40px;
+  background: url("../img/loading.png") no-repeat center center;
+  -webkit-animation:lrotate 3s linear infinite;
+  animation:lrotate 3s linear infinite;
+  z-index: 10000;
+}
+@keyframes lrotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.light-mask-layer,.mask-layer,.advanced-mask-layer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: .7;
+  z-index: 99;
+}
+.advanced-mask-layer{
+  z-index: 10099;
+}
+.light-mask-layer{
+  background: #FFFFFF;
+}
+//common color
+$headColor:#63CB58;
+$fontColor: #fff;
+$dimColor: #ededed;
+$grayColor: #333;
+$darkColor: #555;
+$baseColor: #24aef2;
+
+
+//right arrow
+@mixin rightArrow($w: 9px,$h:9px,$bc:$baseColor,$bw:1px){
+
+  &:after{
+    content: "";
+    border: $bw solid transparent;
+    border-right-color: $bc;
+    border-bottom-color: $bc;
+    display: inline-block;
+    width: $w;
+    height: $h;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
+//left arrow
+@mixin leftArrow($w: 9px,$h:9px,$bc:$baseColor,$bw:1px){
+
+  &:after{
+    content: "";
+    border: $bw solid transparent;
+    border-right-color: $bc;
+    border-bottom-color: $bc;
+    display: inline-block;
+    width: $w;
+    height: $h;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+}
+//top arrow
+@mixin bottomArrow($w: 9px,$h:9px,$bc:$baseColor,$bw:1px){
+
+  &:after{
+    content: "";
+    border: $bw solid transparent;
+    border-right-color: $bc;
+    border-bottom-color: $bc;
+    display: inline-block;
+    width: $w;
+    height: $h;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+//bottom arrow
+@mixin topArrow($w: 9px,$h:9px,$bc:$baseColor,$bw:1px){
+  &:after{
+    content: "";
+    border: $bw solid transparent;
+    border-right-color: $bc;
+    border-bottom-color: $bc;
+    display: inline-block;
+    width: $w;
+    height: $h;
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+  }
+}
+
+
+//calendar stylesheet
+.plugin{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow: auto;
+  transition: all 0.3s linear;
+}
+.plugin-show{
+  transform: translate3d(0, 0 ,0);
+}
+.plugin-hide{
+  transform: translate3d(100%, 0 ,0);
+}
+.title{
+  text-align: center;
+  height: 45px;
+  line-height: 44px;
+  position: relative;
+  background: #FFFFFF;
+  border-bottom: 1px solid #cccccc;
+  .left-arrow{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 46px;
+    @include leftArrow();
+  }
+}
+//日历组件stylesheet
+.calendar{
+  padding-bottom: 1.5rem;
+  color: $darkColor;
+  .calendar-item{
+    padding: .5rem 0 1.5rem;
+  }
+  %pad{padding:0 .5rem;}
+  .to-gray{ 
+    background: $dimColor;
+  }
+  .now{
+    background: $baseColor;
+    color: #ffffff;
+  }
+  .month-title{
+    @extend %pad;
+    font-size: 1rem;
+  }
+  .week{
+    @extend %pad;
+    padding: 3px 0;
+    margin: 0 10px;
+    background: lightblue;
+    color: #333333;
+    font-size: .8rem;
+    text-align: center;
+    span{
+      float: left;
+      width: 14.2857%;
+    }
+  }
+  ul{
+    @extend %pad;
+  }
+  li{
+    float: left;
+    width: 14.2857%;
+    height: 30px;
+    line-height: 30px;
+    font-size: .9rem;
+    text-align: center;
+
+  }
+}
+//提示框组件stylesheet
+.dialog{
+  position: absolute;
+  width: 85%;
+  top:  50%;
+  left: 50%;
+  transform: translate3d(-50%,-50%,0);
+  -webkit-transform: translate3d(-50%,-50%,0);
+  background: #FFFFFF;
+  border:1px solid #eeeeee;
+  z-index: 10100;
+  .dialog-title{
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    line-height: 1.2;
+    padding: 10px;
+    font-size: .9rem;
+    background: lightblue;
+  }
+  .dialog-btn{
+    display: flex;
+    display: -webkit-flex;
+
+    .btn{
+      flex: 1;
+      text-align: center;
+      line-height: 40px;
+      font-size: 1rem;
+      &:first-of-type{
+        border-right: 1px solid #ff0;
+      }
+    }
+  }
+}
+
+//flex布局
+@mixin flex{
+  display: flex;
+  display: -webkit-flex;
+}
+@mixin flexTo($n:1){
+  flex: $n;
+}
+@mixin direction(){
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+@mixin c-horizontal(){
+  justify-content: center;
+}
+@mixin c-vertical(){
+  align-items: center;
+}
+
+

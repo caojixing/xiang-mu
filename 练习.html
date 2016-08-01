@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	
+	input{
+		background: red;
+		outline: none;
+		border:none;
+		text-indent: 2em;
+	}
+	.box{
+		width: 100px;
+		height:100px;
+		background:red;
+		position: absolute;
+		left: 0;
+		top:0;
+		right:0;
+		margin:auto;
+
+	}
+	#sec{
+		width: 600px;
+		height:400px;
+		background: blue;
+	}
+	#sec div{
+		width: 60px;
+		height:40px;
+		background: red;
+		float: left;
+		margin-left: 20px;
+		margin-top:20px;
+	}
+</style>
+
+<body>
+	<div class="box">
+		<!-- <input type="text" placeholder="112544878879"></input>
+		<input type="file" accept="image">
+		<input type="file" accept="video" placeholder="视屏">
+		<p>64646468465512</p>
+		 -->
+		<l 
+		<input type="buttom" value="click test1" id="inpt_test1">
+		<input type="buttom" value="click test2" id="inpt_test2">
+	</div>
+
+	<section id="sec">
+		
+	</section>
+
+	<script type="text/javascript">
+
+	function bb(s){
+		var pattern=/^\d{5,8}$/
+		if(!pattern.test(s)){
+			alert("请输入数字")
+		}
+	}
+	bb("3132132");
+
+	/*function aa(){
+
+	}
+	var a=1;
+		function f(){
+			
+			var a=2;
+			alert(a);
+		}
+		f();*/
+/*
+	var sum=1;
+    for(var i=0;i<=10;i+=2){
+     sum+=1;
+      if(i%6==0){
+           continue;
+      }
+    }
+console.log(sum);
+*/
+
+/*function A( age, name ){ 
+  this.age = age; 
+  this.name = name; 
+} 
+A.prototype.show = function(){ 
+  alert('父级方法'); 
+  function B(age,name,job){ 
+  // 填写代码实现B对象继承A对象
+  this.job = job; 
+} 
+var b = new B(15,'狼侠','侠客'); 
+
+b.show();//注释处的代码可以是（    ）
+*/
+
+
+/*var sum=1;
+    for(var i=0;i<=10;i+=2){
+     sum+=1;
+      if(i%6==0){
+           continue;
+      }
+    }*/
+console.log(sum);
+/*alert(13|5)*/
+/*alert(13&5)*/
+/*alert(13>>2)*/
+alert(-13>>2)
+	/*var Sec=document.getElementById('sec');
+		for(var i=0;i<10;i++){
+			var obj=document.createElement('div');
+				obj.innerHTML=i;
+				obj.onclick=function(){
+					alert(i)
+				}
+				//document.body.appendChild(obj);//输出0到9
+
+				Sec.appendChild(obj);
+		}*/
+
+		/*document.body.appendChild(obj);//值输出一个9*/
+
+
+		/*function test(){
+			this.value="click test";
+			this.clickTest=function(){
+				alert(this.value)
+			}
+		}
+		var T=new test();
+		document.getElementById('inpt_test1').onclick=function(){
+			T.clickTest();
+		}
+		document.getElementById('inpt_test2').onclick=T.clickTest;*/
+
+	</script>
+</body>
+</html>

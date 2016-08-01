@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li>
+			 	<dl>
+			 		<dt>我是第一个</dt>
+			 		<dd class="dd"></dd>
+			 	</dl>
+			 	<p></p>
+			 </li>
+
+		     <li                                      >
+		    				<dl>
+		    					<dt>我是第二个</dt>
+		    					<dd class="dd"></dd>
+		    				</dl>
+		    				<p ></p>
+		    </li>
+		    			
+		    <li>
+		    	  <dl>
+		    				<dt>我是第三个</dt>
+		    				<dd class="dd"></dd>
+		    			</dl>
+		    			<p></p>
+		    </li>
+		    		
+		    <li>
+		    			<dl>
+		    				<dt>我是第四个</dt>
+		    				<dd class="dd"></dd>
+		    			</dl>
+		    			<p></p>
+		    </li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="../jquery.js"></script>
+
+	<script type="text/javascript">
+
+		$("li").mouseenter(function(){
+			$(this).find("p").stop().animate({
+				"top":0
+			},500)
+
+		}).mouseleave(function(){
+			$(this).find("p").stop().animate({
+				"top":"400px"
+			},500)
+		})
+
+	</script>
+</body>
+</html>

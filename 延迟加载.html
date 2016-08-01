@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var time=null;
+		Function.prototype.delay=function(time1,time2){
+			var that=this;
+		   	time=window.setInterval(function(){//超时调用
+				that();
+			},time1)
+			console.log(time)
+			window.setTimeout(function(){
+				clearInterval(time,time2);
+			});
+		}
+		
+		function b(){
+			document.write('5468784363513assdas6dsdsa<br/>');
+		}
+
+		b.delay(10,1000);
+
+   
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/order.css">
+</head>
+<body>
+
+	<div class="container">
+		<header class="title"><span class="left-arrow back"></span><span class="hotel-count">订单详情</span></header>
+		<div class="order-page">
+			<div class="yy">
+				<dl>
+					<dt><img src="img/room.jpg" alt=""></dt>
+					<dd>
+						<h4>北京王府井希尔顿酒店</h4>
+						<h4>标准大床房</h4>
+						<p class="qian">￥90</p>
+						<p class="danB">担保</p>
+					</dd>
+				</dl>
+			</div>
+			<section class="change-date clearfix">
+			    <div>入住：<span class="get-in-date">2016-06-06</span></div><div>离店：<span class="get-out-date">2016-06-16</span></div>
+			</section>
+			<div class="fill-area">
+				<section class="room-count">
+					<h2>房间信息</h2>
+					<p class="room-num"><span class="left">房间数量</span><span class="right count">3</span></p>
+					<p class="room-time"><span class="left">到店时间</span><span class="right time">19:00之前</span></p>
+				</section>
+				<section class="customer-info">
+					<h2>入住人信息</h2>
+					<div class="c-i">
+						<p><span class="left">姓名</span><input type="text" placeholder="每间只需填写一个姓名" class="right"></p>
+						<p><span class="left">证件</span><input type="text" placeholder="入住人身份证号/护照号" class="right"></p>
+					</div>
+				</section>
+				<section class="phone-info">
+					<h2>联系人信息</h2>
+					<p><span class="left">姓名</span><input type="text" placeholder="联系人姓名" class="right"></p>
+					<p><span class="left">手机</span><input type="text" placeholder="用于接收通知消息" class="right"></p>
+				</section>
+				<section class="warning">
+					<h4>温馨提示：</h4>
+					<p>当前房间紧张，需冻结您的信用卡金额90元用于担保订，</p>
+					<p>如订单不确定我们将立刻进行解冻。该订单确定后不可被</p>
+					<p>消修改。若未入住或取消修改，担保费用将不予退还</p>
+				</section>
+				<section class="sure_yd">
+					<span class="total_price">担保交易：￥90</span>
+					<span class="ydBtn">立即预订</span>
+				</section>
+			</div>
+			<!-- <div class="plugin slideSelect">
+				<div class="plugin"></div>
+			</div> -->
+			<div class="plugin slideSelect none">
+			     <div class="mask-layer"></div>
+			     <div class="slideContent">
+			       <div class="slideTitle">
+			         <span class="slide-title">确定</span><span class="right cancel">取消</span>
+			       </div>
+			       <ul></ul>
+			     </div>
+			 </div>
+		</div>
+	</div>
+
+	<div class="plugin calendar plugin-hide">
+
+	<script src="lib/jquery.js"></script>	
+	<script src="lib/iscroll.js"></script>
+
+	<script src="component/calendar.js"></script>
+	<script src="component/dialog.js"></script>
+	<script src="component/plugin.js"></script>
+
+	<script src="js/detail.js"></script>
+	<script src="js/order.js"></script>
+	
+</body>
+</html>

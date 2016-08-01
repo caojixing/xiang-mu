@@ -1,0 +1,545 @@
+/* line 1, detail.scss */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-backface-visibility: hidden; }
+
+/* line 9, detail.scss */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+/* line 14, detail.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 18, detail.scss */
+table th, table td {
+  vertical-align: top; }
+
+/* line 22, detail.scss */
+fieldset, img {
+  border: 0; }
+
+/* line 26, detail.scss */
+em, strong, b, i {
+  font-style: normal;
+  font-weight: normal; }
+
+/* line 31, detail.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+/* line 35, detail.scss */
+body, input, button, textarea {
+  font-family: Helvetica, sans-serif; }
+
+/* line 39, detail.scss */
+a {
+  text-decoration: none;
+  outline: none; }
+
+/* line 44, detail.scss */
+a:hover {
+  cursor: pointer; }
+
+/* line 48, detail.scss */
+html, body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 100%;
+  width: 100%;
+  color: #333;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  position: relative; }
+
+/* line 61, detail.scss */
+body {
+  position: relative;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch; }
+
+/* line 67, detail.scss */
+ul, ol {
+  list-style-type: none; }
+
+/* line 70, detail.scss */
+ul li, ol li {
+  list-style: none; }
+
+/* line 74, detail.scss */
+a, input, textarea, select {
+  outline: 0;
+  -webkit-appearance: none;
+  font-size: 100%; }
+
+/* line 80, detail.scss */
+a {
+  color: #333;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent; }
+
+/* line 85, detail.scss */
+a:active {
+  color: #1a1a1a; }
+
+/* line 89, detail.scss */
+::-webkit-input-placeholder {
+  color: #cacaca; }
+
+/* line 93, detail.scss */
+input:-moz-placeholder {
+  color: #cacaca; }
+
+/* line 97, detail.scss */
+.clearfix:before, .clearfix:after {
+  display: block;
+  content: " ";
+  height: 0; }
+
+/* line 102, detail.scss */
+.clearfix:after {
+  clear: both; }
+
+/* line 108, detail.scss */
+.container {
+  width: 100%;
+  height: 100%;
+  background: #f5f6f5;
+  overflow: hidden;
+  position: relative;
+  -webkit-font-smoothing: none; }
+
+/* line 117, detail.scss */
+.detail-page {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: absolute;
+  top: 45px;
+  bottom: 0;
+  padding-bottom: 45px; }
+
+/* line 127, detail.scss */
+.title {
+  text-align: center;
+  line-height: 45px; }
+
+/* line 133, detail.scss */
+.title .left-arrow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 46px; }
+
+/*   title   */
+/* line 142, detail.scss */
+.title .left-arrow:after {
+  content: "";
+  border: 1px solid transparent;
+  border-right-color: #24aef2;
+  border-bottom-color: #24aef2;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg); }
+
+/* line 157, detail.scss */
+.change-date {
+  font-size: .8rem;
+  margin-top: 10px;
+  background: #fff;
+  border-bottom: 1px solid #ccc; }
+
+/* line 163, detail.scss */
+.change-date div {
+  float: left;
+  width: 50%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center; }
+
+/* line 169, detail.scss */
+.change-date span:after {
+  content: "";
+  border: 1px solid transparent;
+  border-right-color: #24aef2;
+  border-bottom-color: #24aef2;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+/*   hotel-img    */
+/* line 184, detail.scss */
+.hotel-img {
+  width: 100%;
+  height: 125px;
+  position: relative; }
+  /* line 189, detail.scss */
+  .hotel-img p {
+    width: 100%;
+    height: 125px; }
+    /* line 193, detail.scss */
+    .hotel-img p img {
+      width: 100%;
+      height: 100%; }
+  /* line 199, detail.scss */
+  .hotel-img .look-more {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    width: 75px;
+    height: 35px;
+    color: #fff;
+    background: #000;
+    text-align: center;
+    line-height: 35px;
+    opacity: 0.8; }
+
+/*  hotel-info   */
+/* line 214, detail.scss */
+.hotel-info {
+  width: 100%;
+  background: #fff;
+  padding-top: 1px; }
+  /* line 218, detail.scss */
+  .hotel-info .hotel-info-tab {
+    width: 90%;
+    margin: 1rem auto;
+    border: 1px solid #24AEF2;
+    clear: both;
+    border-radius: 3px; }
+    /* line 225, detail.scss */
+    .hotel-info .hotel-info-tab span {
+      float: left;
+      color: #24AEF2;
+      width: 50%;
+      text-align: center;
+      line-height: 40px; }
+      /* line 231, detail.scss */
+      .hotel-info .hotel-info-tab span.active {
+        background: #24AEF2;
+        color: #fff; }
+  /* line 238, detail.scss */
+  .hotel-info .tab-win {
+    min-height: 170px;
+    overflow: hidden;
+    height: 180px; }
+    /* line 243, detail.scss */
+    .hotel-info .tab-win .tab-wrap {
+      width: 200%; }
+    /* line 247, detail.scss */
+    .hotel-info .tab-win .tab-con {
+      float: left;
+      width: 50%;
+      min-height: 170px;
+      padding: 0 2.5%; }
+    /* line 253, detail.scss */
+    .hotel-info .tab-win p {
+      height: 45px;
+      line-height: 45px;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      border-bottom: 1px solid #ccc; }
+    /* line 263, detail.scss */
+    .hotel-info .tab-win .hotel-info-name {
+      color: #000;
+      font-weight: 600;
+      border-bottom: 1px solid #CCC;
+      line-height: 40px; }
+    /* line 270, detail.scss */
+    .hotel-info .tab-win .hotel-info-address {
+      line-height: 45px;
+      border-bottom: none; }
+    /* line 276, detail.scss */
+    .hotel-info .tab-win .hotel-info-detail {
+      height: 180px;
+      line-height: 30px;
+      font-size: 0.9rem;
+      text-indent: 1.8rem;
+      white-space: pre-line;
+      margin-bottom: 20px; }
+
+/*   article    */
+/* line 288, detail.scss */
+.room-type-down {
+  height: auto; }
+
+/* line 292, detail.scss */
+.detail-room-type {
+  width: 100%;
+  background: #fff;
+  height: 273px;
+  padding: 0 10px;
+  overflow: hidden;
+  -webkit-transition: height 0.3s ease;
+  transition: height 0.3s ease; }
+  /* line 301, detail.scss */
+  .detail-room-type.Height {
+    height: auto; }
+  /* line 305, detail.scss */
+  .detail-room-type .room-type {
+    width: 100%;
+    display: -webkit-flex;
+    padding: 0 10px;
+    border-bottom: 1px solid #ccc; }
+    /* line 311, detail.scss */
+    .detail-room-type .room-type .type-name {
+      color: #000;
+      font-weight: 800; }
+    /* line 316, detail.scss */
+    .detail-room-type .room-type .type-character {
+      font-size: 0.7rem;
+      color: #666; }
+      /* line 320, detail.scss */
+      .detail-room-type .room-type .type-character span {
+        margin-right: 7px; }
+    /* line 325, detail.scss */
+    .detail-room-type .room-type .type-item {
+      height: 90px;
+      justify-content: center;
+      align-items: center;
+      display: -webkit-flex;
+      -webkit-flex-direction: column;
+      -webkit-flex-grow: 1; }
+      /* line 332, detail.scss */
+      .detail-room-type .room-type .type-item:first-child {
+        -webkit-flex-grow: 2;
+        align-items: flex-start; }
+      /* line 337, detail.scss */
+      .detail-room-type .room-type .type-item:nth-child(2) {
+        color: orange; }
+        /* line 340, detail.scss */
+        .detail-room-type .room-type .type-item:nth-child(2) .detail-ensure {
+          background: orange;
+          color: #fff;
+          border-radius: 3px;
+          padding: 4px; }
+      /* line 348, detail.scss */
+      .detail-room-type .room-type .type-item .book {
+        border: 1px solid #24AEF2;
+        color: #24AEF2;
+        background: #fff;
+        padding: 5px 7px;
+        border-radius: 2px;
+        font-size: 1rem; }
+
+/* line 364, detail.scss */
+.detail-room-type .room-type .type-item .disable {
+  background: #ccc;
+  color: #666;
+  border: 1px solid #ccc; }
+
+/* line 370, detail.scss */
+.plugin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow: auto;
+  transition: all 0.3s linear; }
+
+/* line 380, detail.scss */
+.plugin-show {
+  transform: translate3d(0, 0, 0); }
+
+/* line 383, detail.scss */
+.plugin-hide {
+  transform: translate3d(100%, 0, 0); }
+
+/* line 386, detail.scss */
+.calendar {
+  padding-bottom: 1.5rem;
+  color: #555; }
+
+/* line 389, detail.scss */
+.calendar .calendar-item {
+  padding: .5rem 0 1.5rem; }
+
+/* line 391, detail.scss */
+.calendar .month-title, .calendar .week, .calendar ul {
+  padding: 0 .5rem; }
+
+/* line 393, detail.scss */
+.calendar .to-gray {
+  background: #ededed; }
+
+/* line 395, detail.scss */
+.calendar .now {
+  background: #24aef2;
+  color: #ffffff; }
+
+/* line 398, detail.scss */
+.calendar .month-title {
+  font-size: 1rem; }
+
+/* line 400, detail.scss */
+.calendar .week {
+  padding: 3px 0;
+  margin: 0 10px;
+  background: lightblue;
+  color: #333333;
+  font-size: .8rem;
+  text-align: center; }
+
+/* line 407, detail.scss */
+.calendar .week span {
+  float: left;
+  width: 14.2857%; }
+
+/* line 410, detail.scss */
+.calendar li {
+  float: left;
+  width: 14.2857%;
+  height: 30px;
+  line-height: 30px;
+  font-size: .9rem;
+  text-align: center; }
+
+/* line 418, detail.scss */
+.detail-page .load-more {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #666;
+  border-bottom: 1px solid #ccc;
+  background: #fff; }
+
+/* line 428, detail.scss */
+.room-detail {
+  width: 100%;
+  height: 369px;
+  background: #fff;
+  top: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 99999999;
+  display: none; }
+  /* line 439, detail.scss */
+  .room-detail .yy {
+    position: relative;
+    padding: 10px; }
+  /* line 444, detail.scss */
+  .room-detail .close {
+    position: absolute;
+    margin-top: 10px;
+    top: 10px;
+    right: 10px; }
+  /* line 451, detail.scss */
+  .room-detail dl {
+    height: 90px;
+    padding: 12px;
+    border-bottom: 1px solid #ccc; }
+    /* line 456, detail.scss */
+    .room-detail dl dd, .room-detail dl dt {
+      float: left;
+      height: 100%; }
+    /* line 461, detail.scss */
+    .room-detail dl dt {
+      margin-right: 12px; }
+    /* line 465, detail.scss */
+    .room-detail dl img {
+      display: block;
+      width: auto;
+      height: 100%; }
+    /* line 472, detail.scss */
+    .room-detail dl dd .qian {
+      color: #F98F29;
+      font-weight: bold; }
+    /* line 476, detail.scss */
+    .room-detail dl dd .danB {
+      background: #F98F29;
+      color: #fff;
+      width: 45px;
+      height: 23px;
+      line-height: 23px;
+      text-align: center;
+      border-radius: 3px; }
+  /* line 488, detail.scss */
+  .room-detail ol {
+    width: 100%;
+    padding: 0 10px; }
+    /* line 492, detail.scss */
+    .room-detail ol li {
+      height: 40px;
+      border-bottom: 1px solid #ccc;
+      line-height: 40px;
+      padding: 0 10px;
+      position: relative; }
+      /* line 499, detail.scss */
+      .room-detail ol li:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #D7D7D7;
+        display: inline-block;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        margin-top: -4px; }
+      /* line 512, detail.scss */
+      .room-detail ol li .left {
+        display: inline-block;
+        float: left;
+        margin-left: 20px; }
+      /* line 518, detail.scss */
+      .room-detail ol li .right {
+        float: right; }
+  /* line 524, detail.scss */
+  .room-detail .yd {
+    width: 100%;
+    height: 54px;
+    background: #23AEF1;
+    margin-top: 5px;
+    color: #fff;
+    line-height: 54px;
+    text-align: center;
+    font-size: 18px; }
+
+/* line 537, detail.scss */
+.light-mask-layer, .mask-layer, .advanced-mask-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: .7;
+  z-index: 99; }
+
+/* line 547, detail.scss */
+.advanced-mask-layer {
+  z-index: 10099; }
+
+/* line 550, detail.scss */
+.light-mask-layer {
+  background: #FFFFFF; }
+
+/* line 553, detail.scss */
+.hide {
+  display: none !important; }
+
+/*# sourceMappingURL=detail.css.map */

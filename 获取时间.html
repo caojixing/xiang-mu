@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var date=new Date();
+		function format(param){
+			var _date=new Date();
+			obj={
+				m:_date.getMonth()+1,
+				d:_date.getDate(),
+				h:_date.getHours(),
+				M:_date.getMinutes(),
+				s:_date.getSeconds()
+			}
+			param=param.replace(/([ymdMhs])+/g,function(a,b){
+				//console.log(a+"\n"+b+"\n"+c);
+				//yy 16 
+				if(b=="y"){
+					var len=a.length>4 ? 4:a.length;
+					return _date.getFullYear().substr(4-a.length);
+				}else{
+					if(obj[b]!=undefined){
+						var _len=a.length>2 ? 2:a.length;
+					}
+					return obj[b].substr(2-_len);
+				}
+			});
+			console.log(param);
+		}
+		format('yy-mm-dd');
+	</script>
+</body>
+</html>

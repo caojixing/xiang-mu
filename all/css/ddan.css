@@ -1,0 +1,84 @@
+/* line 1, ddan.scss */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* line 5, ddan.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+/* line 10, ddan.scss */
+ul, ol, li {
+  list-style: none; }
+
+/* line 13, ddan.scss */
+.li_ddan {
+  background: #eeeeee;
+  width: 100%;
+  height: 100%; }
+
+/* line 18, ddan.scss */
+.li_top {
+  width: 100%;
+  height: 15px; }
+
+/* line 22, ddan.scss */
+.li_section2 {
+  width: 100%;
+  height: 450px;
+  background: #fff; }
+  /* line 27, ddan.scss */
+  .li_section2 .detail {
+    width: 100%;
+    height: 318px;
+    margin-left: 23px;
+    padding-top: 10px; }
+    /* line 32, ddan.scss */
+    .li_section2 .detail li {
+      width: 100%;
+      height: 36px;
+      font-size: 14px;
+      line-height: 36px; }
+      /* line 37, ddan.scss */
+      .li_section2 .detail li:nth-of-type(7) {
+        border-bottom: 1px solid #eee; }
+      /* line 40, ddan.scss */
+      .li_section2 .detail li span {
+        float: right;
+        margin-right: 30px; }
+      /* line 44, ddan.scss */
+      .li_section2 .detail li .ch_color {
+        color: #ccc; }
+  /* line 49, ddan.scss */
+  .li_section2 .paybtn {
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    background: #5e83e1;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 30px; }
+    /* line 58, ddan.scss */
+    .li_section2 .paybtn a {
+      color: #fff;
+      text-decoration: none; }
+
+/* line 65, ddan.scss */
+.li_footer2 {
+  width: 90%;
+  height: 57px;
+  margin: 16px auto; }
+  /* line 69, ddan.scss */
+  .li_footer2 p {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px; }
+    /* line 74, ddan.scss */
+    .li_footer2 p span {
+      border-bottom: 1px solid #333; }
+
+/*# sourceMappingURL=ddan.css.map */

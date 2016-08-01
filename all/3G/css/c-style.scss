@@ -1,0 +1,247 @@
+*{
+	margin:0;
+	padding:0;
+}
+.c-box{
+	width:100%;
+	height: 100%;
+	
+	overflow: hidden;
+	header{
+		height:50px;
+		background:#000;
+		position:relative;
+		a{
+			position: absolute;
+			left:27px;
+			top:17px;
+
+			img{
+				width: 20px;
+				height: 20px;
+			}
+		}
+		h1{
+			text-align:center;
+			color:#fff; 
+			font-size: 16px;
+			font-weight: 800;
+			line-height: 50px;
+		}
+	}
+	.c-sec{
+		//display: none;
+		div{
+			padding: 0 32px;
+			p{
+				margin-top: 18px;
+				height:40px;
+				border:1px solid #5E83E1;
+				line-height: 40px;
+				border-radius: 5px;
+				img{
+					width:20px;
+					height:20px;
+					margin-top:9px;
+
+				}
+				input{
+					height:35px;
+					width: 88%;
+					outline: none;
+					border:none;
+					text-indent: 0.5em;
+					font-size: 14px;
+					color:#5E83E1;
+					&::-webkit-input-placeholder{color:#5E83E1;}
+				}
+			}
+
+			ul{
+
+				h3{
+					font-size: 14px;
+					height:35px;
+					line-height: 35px;
+				}
+
+				li{
+					margin-bottom: 18px;
+					height:40px;
+					border:1px solid #ccc;
+					border-radius: 5px;
+					line-height:40px;
+					padding-left: 10px;
+					
+					input{
+						height:35px;
+						width: 96%;
+						outline: none;
+						border:none;
+						font-size: 14px;
+						font-weight: 200;
+						text-indent: 0.5em;
+						line-height: 35px;
+					}
+					&:nth-of-type(5){
+						background:#eeeeee;
+						font-size: 16px;
+						text-indent: 2em;
+						color:#9C9C9C;
+						border:1px solid transparent;
+						a{
+							float:right;
+							margin-right:10px;
+							margin-top:3px;
+						}
+						.dir{
+							width:10px;
+							height:10px;
+							display:inline-block;
+							margin-top: 15px;
+							border-top: 2px solid #9c9c9c;
+							border-right: 2px solid #9c9c9c;
+							-webkit-transform:rotate(45deg);
+							margin-right: 15px;
+						}
+					}
+					&:nth-of-type(6){
+						border:none;
+						line-height: 40px;
+						position: relative;
+						b{
+						 	padding-left: 10px;
+						 	font-weight: normal;
+						 	a{
+						 		color:#7E9CE7;
+						 	}
+						}
+						
+						.lab{
+							width:15px;
+							height: 15px;
+							border:1px solid #ccc;
+							display: inline-block;
+							float: left;
+							margin-top: 12px;
+							
+							&:after{
+								content:"";
+								width:5px;
+								height: 10px;
+								border-bottom: 1px solid #fff;
+								border-right: 1px solid #fff;
+								-webkit-transform:rotate(45deg);
+								display: block;
+								margin-left: 5px;
+								
+								display: none;
+							}
+						}
+						input{
+							width:15px;
+							height: 15px;
+							opacity: 0;
+							margin-right: 5px;
+							position: absolute;
+							left: 11px;
+							top: 12px;
+							z-index: 999;
+
+							&:checked+label{
+								background:#5e83e1;
+								border-color:#5e83e1;
+								&:after{
+									display:block;
+								}
+							}
+	
+						}
+
+						
+					}
+				}
+			}
+			.btn{
+				height:40px;
+				background:#cccccc;
+				border-radius: 20px;
+				font-size: 20px;
+				text-align: center;
+				line-height: 40px;
+				color:#fff;
+			}
+		}
+	}
+}
+
+.c-dd{
+	width: 100%;
+	height: 100%;
+	margin-top: 10px;
+	display: none;
+
+	.c-d-top{
+		width:100%;
+		height: 420px;
+		background: #fff;
+
+		.c-ul{
+			width:80%;
+			height: 322px;
+			margin:0 auto;
+
+			li{
+				padding-top: 10px;
+				font-size: 14px;
+				padding-bottom: 10px;
+
+				span{
+					float: right;
+					font-size: 12px;
+				}
+
+				&:nth-of-type(7){
+					border-bottom: 1px solid #eee;
+				}
+
+				&:nth-of-type(8){
+					font-weight: bolder;
+				}
+			}
+		}
+		.c-pay{
+			width: 80%;
+			height: 39px;
+			background: #5e83e1;
+			margin:20px auto;
+			border-radius: 20px;
+			line-height: 39px;
+			text-align: center;
+			font-size: 16px;
+			color: #fff;
+		}
+	}
+}
+
+	.c_footer1{
+	  width:80%;
+	  height: 100px;
+	  margin:0 auto;
+	  padding-top: 10px;
+	  clear:both;
+
+	  p{
+	    color:#9c9c9c;
+	    font-size: 12px;
+	    line-height: 25px;
+		width: 80%;
+		margin:0 auto;
+	    span{
+	      text-decoration: underline;
+	    }
+	  }
+	  
+	}
+
+

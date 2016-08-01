@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div ng-app="routingDemoApp">
+		<h2>路由应用</h2>
+        <ul>
+            <li><a href="#/">首页</a></li>
+            <li><a href="#/computers">电脑</a></li>
+            <li><a href="#/printers">打印机</a></li>
+            <li><a href="#/blabla">其他</a></li>
+        </ul>
+         
+        <div ng-view=""></div><!-- 显示内容的地方 -->
+
+        <script src="angular.min.js"></script>
+        <script src="angular-route.min.js"></script>
+
+        <script>
+        
+            angular.module('routingDemoApp',['ngRoute'])/*名字要对应*/
+            
+            .config(['$routeProvider', function($routeProvider){
+                $routeProvider
+                .when('/',{templateUrl:'index222.html'})
+                .when('/computers',{templateUrl:'动画.html'})/*template也可以跳转*/
+                .when('/printers',{templateUrl:'控制器.html'})
+                .when('/blabla',{template:'其他'})
+            }]);
+        </script>
+        
+	</div>
+</body>
+</html>

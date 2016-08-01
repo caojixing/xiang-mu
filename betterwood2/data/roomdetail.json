@@ -1,0 +1,50 @@
+{
+  "error":"0",
+  "msg":"服务器返回正常",
+  "result":[{
+    "id":1,
+    "price": 190,
+    "type":"标准大床房",
+    "area":"30",
+    "count": 2,
+    "bed":[1.2,2],
+    "wifi":"",
+    "meal":""
+  },{
+    "id":2,
+    "price": 490,
+    "type":"豪华大床房",
+    "area":"50",
+    "count": 2,
+    "bed":[2,1],
+    "wifi":"",
+    "meal":""
+  },{
+    "id":3,
+    "price": 300,
+    "type":"经济套房",
+    "area":"50",
+    "count": 4,
+    "bed":[1.2,4],
+    "wifi":"",
+    "meal":""
+  },{
+    "id":4,
+    "price": 510,
+    "type":"商务大床房",
+    "area":"50",
+    "count": 2,
+    "bed":[1.2,2],
+    "wifi":"",
+    "meal":""
+  },{
+    "id":5,
+    "price": 1900,
+    "type":"经典双人房",
+    "area":"50",
+    "count": 2,
+    "bed":[1.2,2],
+    "wifi":"",
+    "meal":""
+  }]
+}

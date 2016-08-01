@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+<!-- ng-app定义程序在div中运行
+ng-controller=“ myCtrl”定义一个控制器
+$scope 调用控制器   范围
+控制器在作用域中创建了两个属性（firstName和lastName）
+ng-model指令绑定输入域到控制器的属性 -->
+
+
+<!-- 	<div ng-app="myApp"  ng-controller="myCtrl">
+姓：<input type="text" ng-model="lastName"><br/>
+	名：<input type="text" ng-model="firstName"><br/>
+	
+	姓名：{{firstName+" "+lastName}}
+</div>
+<script type="text/javascript">
+	var app=angular.module("myApp",[]);
+	     app.controller('myCtrl',function($scope){
+		     $scope.firstName="565656565";
+	         $scope.lastName="44444444";
+	})
+
+</script> -->
+	<div ng-app="myApp" ng-controller="personCtrl">
+
+		名: <input type="text" ng-model="firstName"><br>
+		姓: <input type="text" ng-model="lastName"><br>
+		<br>
+		姓名: {{fullName()}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('personCtrl', function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+    $scope.fullName = function() {
+        return $scope.firstName + " " + $scope.lastName;
+    }
+});
+</script> 	
+</html>

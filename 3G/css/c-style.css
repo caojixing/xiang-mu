@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.c-box header {
+  height: 50px;
+  background: #000;
+  position: relative; }
+  .c-box header a {
+    position: absolute;
+    left: 0;
+    top: 6px; }
+  .c-box header h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 50px; }
+.c-box .c-sec div {
+  padding: 0 32px; }
+  .c-box .c-sec div p {
+    margin-top: 18px;
+    height: 40px;
+    border: 1px solid #5E83E1;
+    line-height: 40px;
+    border-radius: 5px; }
+    .c-box .c-sec div p img {
+      width: 21px;
+      height: 23px;
+      margin-top: 3%; }
+    .c-box .c-sec div p input {
+      height: 35px;
+      width: 88%;
+      outline: none;
+      border: none;
+      text-indent: 0.5em;
+      font-size: 14px;
+      color: #5E83E1; }
+      .c-box .c-sec div p input::-webkit-input-placeholder {
+        color: #5E83E1; }
+  .c-box .c-sec div ul h3 {
+    font-size: 16px;
+    height: 35px;
+    line-height: 35px; }
+  .c-box .c-sec div ul li {
+    margin-bottom: 18px;
+    height: 40px;
+    border: 2px solid #EEEEEE;
+    border-radius: 5px;
+    line-height: 40px; }
+    .c-box .c-sec div ul li input {
+      height: 35px;
+      width: 96%;
+      outline: none;
+      border: none;
+      font-size: 14px;
+      font-weight: 200;
+      text-indent: 0.5em;
+      line-height: 35px; }
+    .c-box .c-sec div ul li:nth-of-type(5) {
+      background: #eeeeee;
+      font-size: 14px;
+      text-indent: 0.5em;
+      color: #9C9C9C;
+      border: none; }
+      .c-box .c-sec div ul li:nth-of-type(5) a {
+        float: right;
+        margin-right: 10px;
+        margin-top: 3px; }
+      .c-box .c-sec div ul li:nth-of-type(5) img {
+        margin-top: 12%;
+        width: 15px;
+        height: 20px; }
+    .c-box .c-sec div ul li:nth-of-type(6) {
+      border: none;
+      position: relative; }
+      .c-box .c-sec div ul li:nth-of-type(6) b {
+        position: absolute;
+        left: 26px;
+        top: -3px; }
+        .c-box .c-sec div ul li:nth-of-type(6) b a {
+          color: #7E9CE7; }
+      .c-box .c-sec div ul li:nth-of-type(6) input {
+        width: 15px;
+        height: 15px; }
+        .c-box .c-sec div ul li:nth-of-type(6) input::checked-webkit-input-checked {
+          background: #5E83E1; }
+      .c-box .c-sec div ul li:nth-of-type(6) input::-webkit-input-checked {
+        background: #5E83E1; }
+  .c-box .c-sec div .btn {
+    height: 40px;
+    background: #eeeeee;
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 35%; }

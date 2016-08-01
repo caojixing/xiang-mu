@@ -1,0 +1,9 @@
+require.config({
+	paths:{
+		'jquery':'js/jquery-1.9.1.min',
+		'fastClick':'js/fastclick'
+	}
+});
+require(['fastClick','js/index','js/binding'],function(fc){
+	fc.attach(document.body);
+})

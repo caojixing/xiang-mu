@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var str="get-element-ty-id"
+			arr=str.split("-"),
+			t=arr[0];
+			//console.log(str.split("-"));
+			//console.log(arr)
+			for(var i=1;i<arr.length;i++){
+				t+=arr[i].slice(0,1).toUpperCase()+arr[i].slice(1);
+			}
+			console.log(t)
+	</script>
+</body>
+</html>

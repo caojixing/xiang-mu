@@ -1,0 +1,140 @@
+@charset "UTF-8";
+@import url(reset.css);
+/* line 3, xie_bind.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+/* line 8, xie_bind.scss */
+.xie_container {
+  width: 100%;
+  height: 100%;
+  padding-top: 14px;
+  padding-bottom: 17px;
+  background: #eee;
+  font-family: "微软雅黑"; }
+
+/* line 16, xie_bind.scss */
+.xie_bind {
+  width: 100%;
+  height: 100%;
+  background: #fff; }
+
+/* line 22, xie_bind.scss */
+.xie_form {
+  width: 95%;
+  padding-top: 22px;
+  margin-left: 10px; }
+  /* line 26, xie_bind.scss */
+  .xie_form div {
+    width: 100%;
+    height: 38px;
+    display: -webkit-flex; }
+  /* line 32, xie_bind.scss */
+  .xie_form input {
+    -webkit-flex: 1;
+    border: none;
+    height: 100%;
+    font-size: 14px;
+    line-height: 100%;
+    min-width: 100px;
+    border-bottom: 1px solid #eee;
+    color: #515151; }
+    /* line 41, xie_bind.scss */
+    .xie_form input::-webkit-input-placeholder {
+      color: #9c9c9c; }
+  /* line 45, xie_bind.scss */
+  .xie_form .xie_picCode {
+    width: 100px;
+    height: 100%; }
+    /* line 48, xie_bind.scss */
+    .xie_form .xie_picCode img {
+      width: 80px;
+      height: 20px; }
+    /* line 52, xie_bind.scss */
+    .xie_form .xie_picCode dt {
+      padding-top: 3px;
+      width: 80px;
+      height: 20px;
+      margin: 0 auto; }
+    /* line 58, xie_bind.scss */
+    .xie_form .xie_picCode dd {
+      height: 12px;
+      padding-top: 2px;
+      font-size: 12px;
+      width: 100px;
+      text-align: center;
+      color: #5e83e1; }
+  /* line 67, xie_bind.scss */
+  .xie_form .getCode {
+    width: 100px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 6px;
+    color: #ccc; }
+  /* line 76, xie_bind.scss */
+  .xie_form .timer {
+    background: #eee;
+    color: #9c9c9c;
+    border-radius: 12px; }
+  /* line 81, xie_bind.scss */
+  .xie_form .xie_show {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #9c9c9c;
+    opacity: 0; }
+  /* line 89, xie_bind.scss */
+  .xie_form .xie_btn {
+    margin-top: 9px;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #ccc;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 17px; }
+  /* line 100, xie_bind.scss */
+  .xie_form .on {
+    background: #5e83e1; }
+
+/* line 104, xie_bind.scss */
+.xie_question {
+  width: 95%;
+  padding-top: 32px;
+  color: #9c9c9c;
+  margin-left: 10px; }
+  /* line 109, xie_bind.scss */
+  .xie_question h2 {
+    font-weight: normal;
+    font-size: 14px; }
+  /* line 113, xie_bind.scss */
+  .xie_question h3 {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    padding-left: 17px;
+    position: relative; }
+    /* line 119, xie_bind.scss */
+    .xie_question h3:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -4px;
+      width: 9px;
+      height: 9px;
+      background: #eee;
+      border-radius: 3px; }
+  /* line 131, xie_bind.scss */
+  .xie_question p {
+    font-size: 12px;
+    line-height: 22px;
+    padding-left: 17px; }
+
+/*# sourceMappingURL=xie_bind.css.map */

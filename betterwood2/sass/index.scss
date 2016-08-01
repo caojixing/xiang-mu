@@ -1,0 +1,108 @@
+@import "common";
+
+.index-banner{
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  ul{
+    height: 100%;
+  }
+  li{
+    float: left;
+    height: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  
+}
+
+$bb: 1px solid $dimColor;
+.index-body{
+  border-bottom: $bb;
+  padding-left: .9375rem;
+  background: #ffffff;
+  span{
+    float: left;
+    &:first-child{
+
+    }
+    &:nth-child(2){
+
+    }
+  }
+  .index-item{
+    overflow: hidden;
+    border-bottom: $bb;
+    height: 4.375rem;
+    line-height: 4.375rem;
+    position: relative;
+    padding-left: 1rem;
+    &:last-child{
+      &:after{
+        display: none;
+      }
+    }
+    &:first-child{
+      padding-right: 4rem;
+      span{
+        &:nth-child(2){
+          color: $baseColor;
+        }
+      }
+
+      span:nth-child(3){
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 4rem;
+        text-align: center;
+        font-size: .9rem;
+      }
+    }
+    @include rightArrow();
+    &:after{
+      float: right;
+      margin: 1.8rem 10px 0 0;
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      -webkit-border-radius: 50%;
+      border-radius:50%;
+      background: $dimColor;
+      top: 50%;
+      left: .3rem;
+      margin-top: -4px;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+  .index-title{
+    font-size: .8rem;
+    color: $darkColor;
+    width: 3rem;
+  }
+  input.index-value{
+    border: none;
+
+  }
+  .index-value{
+    font-size: 1.1rem;
+    color: $darkColor;
+    width: 56%;
+    height: 100%;
+    padding-left: .5rem;
+  }
+}
+.index-button{
+  width: 100%;
+  background: $baseColor;
+  text-align: center;
+  height: 3rem;
+  line-height: 3rem;
+  color: #ffffff;
+  margin: .7rem 0 2rem;
+}

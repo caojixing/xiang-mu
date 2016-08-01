@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*, :after, *:before {
+  -webkit-box-sizing: border-box; }
+
+li {
+  list-style: none; }
+
+body, html, .box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url(../pic/bg.png); }
+
+.box header {
+  height: 45px;
+  background: #fff; }
+  .box header h1 {
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    line-height: 45px; }
+    .box header h1 a {
+      position: absolute;
+      left: 10px;
+      top: 12px; }
+      .box header h1 a img {
+        width: 10px;
+        height: 20px; }
+.box section {
+  background: url(../pic/bg-2.png) no-repeat;
+  background-size: 100% 100%;
+  margin: 10% auto;
+  width: 80%;
+  height: 80%;
+  font-size: 16px;
+  padding-top: 12%;
+  position: relative; }
+  .box section h3 {
+    color: #b00600;
+    text-align: center;
+    font-size: 20px; }
+  .box section p {
+    position: relative;
+    height: 42px; }
+    .box section p a {
+      position: absolute;
+      z-index: 55; }
+      .box section p a:nth-of-type(1) {
+        left: 24%;
+        top: 10px; }
+      .box section p a:nth-of-type(2) {
+        right: 25%;
+        top: 10px; }
+      .box section p a input {
+        opacity: 0; }
+    .box section p label {
+      width: 50px;
+      height: 30px;
+      position: absolute; }
+      .box section p label:before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border: 1px solid #222;
+        border-radius: 10px;
+        position: absolute;
+        z-index: 9; }
+      .box section p label:nth-of-type(1) {
+        left: 23%;
+        top: 13px; }
+      .box section p label:nth-of-type(2) {
+        right: 20%;
+        top: 13px; }
+  .box section ul {
+    margin: 0 auto;
+    width: 80%;
+    height: 43%;
+    background: url(../pic/bing.png) no-repeat;
+    background-size: 100% 100%;
+    padding-top: 10%; }
+    .box section ul li {
+      float: left;
+      margin-left: 6%;
+      height: 25px;
+      width: 65px;
+      margin-top: 20px;
+      text-align: center;
+      border: 1px solid #333;
+      border-radius: 5px; }
+      .box section ul li:hover {
+        background: red;
+        color: #fff; }
+  .box section .btn {
+    position: absolute;
+    left: 35%;
+    bottom: 26%;
+    background: url(../pic/btn_bg.png);
+    background-size: 100% 100%;
+    width: 110px;
+    height: 40px;
+    color: #b00600;
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px; }
+  .box section .greens {
+    width: 90px;
+    height: 75px;
+    background: url(../pic/ii.png);
+    background-size: 100% 100%;
+    position: absolute;
+    left: -20px;
+    bottom: 4px; }

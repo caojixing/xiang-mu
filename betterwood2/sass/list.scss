@@ -1,0 +1,210 @@
+@import "common";
+%bb{border-bottom:1px solid #cccccc;}
+.change-date{
+  font-size: .8rem;
+  @extend %bb;
+  div{
+    float: left;
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+  span{
+    @include rightArrow();
+  }
+}
+.list-wrap{
+  position: absolute;
+  top: 76px;
+  bottom: 45px;
+  left: 0;
+  width: 100%;
+  overflow: auto;
+}
+.lists{
+  $orange:orange;
+  $lightgray:#777;
+  $dimgray:#333;
+  background: #FFFFFF;
+  .list-item{
+    @extend %bb;
+    height: 90px;
+    padding: 10px;
+    @include flex;
+    font-size: .75rem;
+  }
+  .list-item-img,.list-item-info{
+    float: left;
+    height: 100%;
+  }
+  .list-item-img{
+    width: 70px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  %lh{
+    line-height:1.2;
+  }
+  .list-item-info{
+    @include flexTo();
+    padding-left: 10px;
+  }
+  .hotel-name{
+    color: $dimgray;
+    @extend %lh;
+  }
+  .hotel-score{
+    color: $orange;
+    @extend %lh;
+  }
+  .hotel-price{
+    font-size: 1.1rem;
+    float: right;
+    &:after{
+      content: "起";
+      font-size: .6rem;
+      vertical-align: baseline;
+      color: $lightgray;
+    }
+  }
+  .hotel-range,.hotel-address{
+    color: $lightgray;
+    @extend %lh;
+  }
+  .distance{
+    float: right;
+  }
+  em.oran{
+
+  }
+  em.red{
+
+  }
+  em.blue{
+
+  }
+  em{
+    font-size: .6rem;
+    border-radius: 1px;
+    background: $orange;
+    color: #FFFFFF;
+    padding: 1px;
+    -webkit-transform: scale(.8,.8);
+    transform: scale(.8,.8);
+    margin: 0 3px;
+    display: inline-block;
+  }
+}
+.bottom-bar{
+  position: absolute;
+  bottom: 0;
+  z-index: 10001;
+  width: 100%;
+  border-top: 1px solid $baseColor;
+  height: 45px;
+  background: #FFFFFF;
+  font-size: .9rem;
+  li{
+    float: left;
+    width: 25%;
+    border-top: 1px solid transparent;
+    border-right: 1px solid $dimColor;
+    text-align: center;
+    line-height: 44px;
+    &:last-child{
+      border-right: none;
+    }
+    &:after{
+      margin: 0 4px;
+    }
+    @include topArrow(5px,5px,$darkColor);
+    &.high{
+      border-top-color: $baseColor;
+      color: $baseColor;
+      @include bottomArrow(5px,5px);
+      &:after{
+        margin: 4px;
+      }
+    }
+
+  }
+}
+.filter{
+  position: absolute;
+  bottom: 45px;
+  top: auto;
+  height: 220px;
+  width: 100%;
+  font-size: .8rem;
+  z-index: 300;
+  overflow: hidden;
+  .area-show{
+    z-index: 1;
+  }
+  .act-area{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    overflow: auto;
+  }
+  //checkbox stylesheet
+  .checkbox{
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #aaa;
+      top: 50%;
+      margin: -8px 0 0 0;
+    }
+  }
+  .checked{
+
+  }
+  p{
+    @extend %bb;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 10px;
+    color: $grayColor;
+    &.active{
+      color: $baseColor;
+      .checkbox{
+        &:before{
+          border-color: $baseColor;
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          width: 11px;
+          height: 6px;
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          border-bottom: 2px solid $baseColor;
+          border-left: 2px solid $baseColor;
+          top: 50%;
+          margin: -5px 0 0 3px;
+        }
+      }
+    }
+    span{
+      &:nth-child(2){
+        width: 20px;
+        height: 100%;
+      }
+
+    }
+  }
+}
+.filter-show{
+  transform: translate3d(0, 0 ,0);
+}
+.filter-hide{
+  transform: translate3d(0, 100% ,0);
+}

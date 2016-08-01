@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<script src="angular.min.js"></script>
+</head>
+<body>
+
+  <!--   <div ng-app="" ng-init="firstName='cao';lastName='xing'" >
+  		<p>姓名：<input type="text" ng-model="name"></p>
+  		<h1>12142{{name}}</h1>
+  		//表达式
+  		<p>我是第一个{{5+4}}</p>
+  
+  		<p>姓名：{{firstName+" "+lastName}}</p>
+  	</div>
+  
+  	<div ng-app="" nginit="ng-init="a=8;b=5" ">
+  			<p>总价：<span ng-bind="a*b"></span></p>
+  	</div>
+  	计算器
+   -->
+	<!-- <div ng-app="" ng-init="quantity=1;price=5">
+		<h2>计算器</h2>
+		数量：<input type="number" ng-model="quantity">
+		价格：<input type="number" ng-model="price">
+		<p><b>{{quantity*price}}</b></p>
+	</div> -->
+
+<!-- 循环数组 -->
+
+	<!-- <div ng-app="" ng-init="names=['jani','haakj','kai','4
+	545','5556468']">
+	  <p>使用ng-repeat来循环数组</p>
+		<ul>
+			<li ng-repeat="x in names">
+				{{ x }}
+			</li>
+		</ul>	
+	</div>
+	 -->
+
+
+	<!-- <div ng-app="" ng-init="names=['Jani','Hege','Kai']">
+	
+	         
+			  <ul>
+			   <p>使用 ng-repeat 来循环数组</p>
+			    <li ng-repeat="x in names">
+			      {{ x }}
+			    </li>
+			  </ul>
+	     </div> -->
+
+ <!--  ng-init 定义为初始值
+ ng-model：类型验证：number  email required
+ 			提供状态：invalid dirty touched error
+ 	     	为元素提供css类
+ 	ng-repeat    对于集合数组的每一项克隆一次html元素 
+	用 directive来添加自定义的指令
+	使用驼峰法来命名一个指令，rynoobDirective。但在使用时需要以 - 分割。runoob-directive
+
+ 	-->
+ 	<!-- 添加自定义指令 -->
+ 	 <div ng-app="myApp">
+ 		<runoob-directive></runoob-directive>
+ 			<script>
+ 				var app=angular.module("myApp", []);
+ 				app.directive("runoobDirective",function(){			
+ 						return{
+ 							template:"<div><h2>自定义命令</h2><h1>系定义</h1></div>"
+ 						};				
+ 				});
+ 		
+ 			</script>
+ 	</div> 
+
+  <!--   <div ng-app="myApp">
+  
+  		<runoob-directive></runoob-directive>
+  		<script>
+  			var app = angular.module("myApp", []);
+  			app.directive("runoobDirective", function() {
+  			    return {
+  			        template : "<h1>自定义指令!</h1>"
+  			    };
+  			});
+      </script>
+   </div> -->
+
+</body>
+</html>

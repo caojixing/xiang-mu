@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head na-app="">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index-c.css">
+	
+</head>
+<body ng-app="myApp" ng-controller="customersCtrl">>
+	<div class="box">
+		<header>
+			<h1><a><img src="pic/L.png"></a>基本信息</h1>
+		</header>
+
+		<section 
+				<h3>不喜欢吃的食物</h3>
+				<ul>
+					 <li ng-repeat="x in names">
+					    <input type="checkbox" id="li"><label for="li"></label>
+					    {{ x.Name + '' + x.Country }}
+					  </li>
+
+				<!-- 	<li><input type="checkbox" id="li"><label for="li">羊肉</label></li>
+				 -->
+				</ul>
+				<div class="greens"></div>
+				<div class="btn">开始测试</div>
+	    </section>	
+
+	    <section class="cao-tan">
+	    	<div class="x"></div>
+	    	<p>亲。我们为您准备60道体能测试题，请您耐心如实答题，获取真实体质结果!!!</p>
+	    	<div class="an">开始测试</div>
+	    </section>
+	    
+	</div>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/index-c.js"></script>
+	<script type="text/javascript">
+		var myapp=angular.module("myApp",[]);
+			myapp.controller("customersCtrl",function($scope,$http){
+				$http.get("json/data.json")
+					.success(function(reponse){
+						$scope.dislikefood=reponse;
+						console.log($scope.dislikefood)
+					})
+			})
+	</script>
+</body>
+</html>
